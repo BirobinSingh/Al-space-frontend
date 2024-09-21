@@ -1,0 +1,244 @@
+/* General Styles */
+:host {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Material css for radio buttons */
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+  
+  /* Material Css for chip(skills) */
+  .example-chip-list {
+    background-color: #fff !important;
+    width: 100%;
+  }
+  
+  /* Material css for button */
+  .mat-flat-button {
+    margin-top: 20px;
+  }
+  
+  /* Material css for add on */
+  .example-section {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container */
+  .container {
+    background-color: #5B99C2;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading {
+    margin-top: 40px;
+    padding: 10px;
+  }
+  
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 130px;
+    height: 50px;
+    font-size: medium;
+    background-color: white;
+    color: #071952;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 40px;
+  }
+  
+  .tagline {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .form {
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 1%;
+    padding: 20px;
+  }
+  
+  /* mat-chip-row :hover{
+    position: relative;
+    left: 20px;
+  } */
+  label {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-right: 0.5rem;
+  }
+  .category,.title{
+    position: relative;
+    bottom: 30px;
+  }
+  .input {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .innerContainer .category,
+  .innerContainer .level,
+  .innerContainer .title,
+  .innerContainer .payment {
+    flex: 1;
+  }
+  
+  .innerContainer .category select,
+  .innerContainer .title input,
+  .innerContainer .payment input {
+    margin-top: 8px;
+  }
+  
+  .rm {
+    display: flex;
+  }
+  
+  .skills {
+    background-color: #fff !important;
+  }
+  
+  .skills .example-chip-list {
+    margin-top: 8px;
+  }
+  
+  .editor {
+    margin-top: 20px;
+  }
+  
+  .addOns {
+    margin-top: 20px;
+  }
+  
+  .additionalInformation {
+    margin-top: 20px;
+  }
+  
+  .additionalInformation input {
+    margin-top: 8px;
+    margin-right: 10px;
+    width: 70%;
+    height: 40px; /* Increase the height */
+    border: none; /* Remove the border */
+    border-bottom: 2px solid #ccc; /* Add an underline */
+    box-sizing: border-box;
+    padding-left: 5px;
+  }
+  
+  .additionalInformation input:focus {
+    outline: none; /* Remove the default outline on focus */
+    border-bottom: 2px solid #007BFF; /* Change the underline color on focus */
+  }
+  
+  .additionalInformation button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #071952;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  /* mat-radio-group{
+    display: flex;
+    justify-content: space-evenly;
+  } */
+  
+  button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;  
+    font-size: 1.1rem;
+    background-color: #071952;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* New CSS for Min and Max input fields */
+  .min-max-container {
+    display: flex;
+    gap: 7px; /* Adds space between the min and max fields */
+    margin-top: 8px;
+  }
+  
+  .min-max-container div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .min-max-container label {
+    margin-bottom: 2px; /* Adds space between the label and the input */
+  }
+  
+  /* Layout and Responsiveness */
+  .innerContainer.container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .innerContainer.container2 .title,
+  .innerContainer.container2 .payment {
+    flex: 1;
+  }
+  
+  .innerContainer.container2 .payment > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .innerContainer.container2 .payment label,
+  .innerContainer.container2 .payment mat-radio-group,
+  .innerContainer.container2 .payment input {
+    width: auto;
+  }
+  .add-btn{
+    width: 150px;
+  }
+  
+  @media (max-width: 768px) {
+    .innerContainer.container2 {
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        height: 40px;
+    }
+  }
+  

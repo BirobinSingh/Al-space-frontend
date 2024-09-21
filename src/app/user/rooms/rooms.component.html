@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Available Cabins For Booking</h1>
+    <div class="heading">
+
+        <h2>Cabin Name</h2>
+        <h2>Number Of Seats</h2>
+    </div>
+    <ng-container *ngFor="let element of data">
+        <div class="open"  *ngIf="!element.IsBooked">
+            <div class="inner">
+                <h3 class="btn"
+                    [routerLink]="['/room',element.Name_,element.No_Of_Seats,element.Id,element.BookedPrice]">
+                    {{element.Name_|uppercase }}
+                </h3>
+                <h3>
+                    <span>{{ element.No_Of_Seats }}</span>
+                </h3>
+            </div>
+        </div>
+    </ng-container>
+</div>

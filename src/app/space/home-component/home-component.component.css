@@ -1,0 +1,24 @@
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border-radius: 10px;
+    /* padding: 20px; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    background-color: #f0f0f0;
+}
+
+app-open-space,
+app-private-space {
+    width: 50%;
+    margin-top: 20px;
+}
+
+app-open-space {
+    /* margin-left: 50px; */
+}
+
+app-private-space {
+    /* margin-right: 70px; */
+}

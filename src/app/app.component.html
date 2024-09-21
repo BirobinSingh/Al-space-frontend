@@ -1,0 +1,42 @@
+<div class="container " [ngClass]="{sidebarActive:sidebarActive}">
+  <div class="sidebar">
+      <div class="sidemenu">
+          <a routerLink="/home">Dashboard</a>
+          <a routerLink="/cabins" id="">Cabins</a>
+          <a routerLink="/services" id="">Services</a>
+          <a routerLink="/user-spaces" id="">User-Space</a>
+          <a routerLink="/creator-component" id="">JD Creator</a>
+          <a routerLink="/viewer-component" id="">JD Viewer</a>
+          <a routerLink="/payment-component" id="">Payment</a>
+          <!-- <a href="" id="">Pricing</a>
+          <a href="" id="">About</a> -->
+      </div>
+  </div>
+  <div class="content">
+      <div class="header">
+          <div class="logo">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+              (click)="sidebarActive=!sidebarActive" x="0px" y="0px"
+                  width="20" height="20" viewBox="0 0 50 50">
+                  <path
+                      d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z">
+                  </path>
+              </svg>
+              Title
+          </div>
+          <div class="menu">
+              <a routerLink="/home" id="">Home</a>
+              <a routerLink="/cabins" id="">Cabins</a>
+          <a routerLink="/services" id="">Services</a>
+              <a href="#" id="">Logout</a>
+          </div>
+      </div>
+      <div class="heroSection">
+        <div >
+            <h1>{{ data| json }}</h1>
+          </div>
+          <router-outlet></router-outlet>
+      </div>
+  
+    </div>
+</div>

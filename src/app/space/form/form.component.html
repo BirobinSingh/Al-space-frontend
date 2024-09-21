@@ -1,0 +1,38 @@
+<div class="container">
+
+  <h1>{{name | uppercase}} </h1>
+
+  <div class="open-seats">
+    <div class="inner">
+      <h3>{{name |uppercase }} SEATS</h3>
+      <h3><span>0/{{availableSeats}}</span></h3>
+    </div>
+
+    <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+  </div>
+
+
+  <form [formGroup]="ownerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <!-- <label for="price">Price:</label> -->
+      <!-- <input type="number" id="price" formControlName="price"> -->
+    </div>
+
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-item" *ngFor="let element of services;let i=index">
+        <label class="toggle">
+          <input type="checkbox" [checked]="array[i]" (change)="cabServiceStatus(i)">
+          <span class="slider"></span>
+        </label>
+        <span class="label-text">{{element.Name_}}</span>
+        <div *ngIf="array[i]" class="price-input">
+          <label for= "{{element.Id}}" >Price:</label>
+          <input type="number" id="price" [formControlName]="element.Id">
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

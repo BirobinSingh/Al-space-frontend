@@ -1,0 +1,47 @@
+/* Container Styles */
+.container {
+    margin: 0 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 6px;
+}
+
+/* Inner Content Styles */
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button Styles */
+.open, .dedicated {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Dedicated Button Styles */
+.dedicated {
+    text-align: center;
+}
+
+/* Additional Button Styles */
+.btn {
+    cursor: pointer;
+    margin-left: 20px;
+}

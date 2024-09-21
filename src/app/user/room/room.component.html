@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>{{name | uppercase}} </h1>
+  <div class="open-seats">
+    <div class="inner">
+      <h3>{{name |uppercase }} SEATS</h3>
+      <h3><span>{{availableSeats}}</span></h3>
+      <h3>{{cabinPrice}}</h3>
+    </div>
+  </div>
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service-item" *ngFor="let element of services">
+      <div class="inner">
+        <h3>{{element.Name_}}</h3>
+      </div>
+    </div>
+  </div>
+  <h2>Master Services</h2>
+  <div class="services-grid">
+    <div class="service-item" *ngFor="let element of masterServices;let i=index">
+      <label class="toggle">
+        <input type="checkbox" [checked]="array[i]" (change)="toggleCabService(i)">
+        <span class="slider"></span>
+      </label>
+      <div class="item">
+        <h3>{{element.Name_}}</h3>
+        <h3>{{element.Price}}</h3>
+      </div>
+    </div>
+    <div>
+      <label for="numberOfDays">Number of days: </label>
+      <input type="number" #numberOfDaysInput name="numberOfDays" id="numberOfDays">
+      <button class="btn" (click)="updatedPrice(numberOfDaysInput.value)">Check Price</button>
+    </div>
+    <div>
+      <h1>Total Price: {{price | number : '1.2-2'}}</h1>
+    </div>
+  </div>
+  <div class="btn">
+    <button (click)="handleBooking()">Book Cabin</button>
+  </div>
+</div>

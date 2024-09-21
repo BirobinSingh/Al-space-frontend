@@ -1,0 +1,94 @@
+h1{
+    text-align: center;
+}
+form {
+    font-family: Arial, sans-serif;
+    /* max-width: 800px; */
+    margin: 10px 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+  
+/* Style labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+  
+/* Style input fields */
+input,select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+  
+/* Style the submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #357ab8;
+}
+  
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+.radio{
+    display: flex;
+    flex-direction: row;
+}
+.radio-input{
+    width: 20px;
+}
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+  
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    form {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label[for^="unitOption"] {
+    margin-right: 20px;
+}

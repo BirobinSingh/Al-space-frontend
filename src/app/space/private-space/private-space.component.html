@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Available Services</h1>
+    <div class="heading">
+
+        <h2>Service Name</h2>
+        <h2>Service Price</h2>
+    </div>
+    <div class="open" *ngFor="let element of services">
+        <div class="inner">
+            <h3 class="btn">
+                {{element.Name_}}
+            </h3>
+            <h3>
+
+                <span>{{element.Price}}</span>
+               
+                    <mat-icon class="btn" (click)="handleClick(element.Id)" >delete</mat-icon>
+                 
+                <!-- {{allocated_open_seats}}/ -->
+            </h3>
+        </div>
+
+
+
+    </div>
+    <div class="dedicated">
+        <div>
+            <h3 mat-button (click)="openDialog()">
+                <!-- <button >Add Service</button> -->
+                Add Service
+            </h3>
+        </div>
+    </div>
+</div>

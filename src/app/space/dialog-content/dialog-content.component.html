@@ -1,0 +1,24 @@
+ <h1>ADD SPACE</h1>
+ <form [formGroup]="cabinForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="noOfSeat">Number of Seats:</label>
+    <input id="noOfSeat" type="number" formControlName="noOfSeat">
+  </div>
+
+  <div>
+    <label for="price">Price:</label>
+    <input id="price" type="number" formControlName="price">
+  </div>
+
+  <div>
+    <label for="code">Code:</label>
+    <input id="code" type="text" formControlName="code">
+  </div>
+
+  <button type="submit" [disabled]="cabinForm.invalid">Submit</button>
+</form>

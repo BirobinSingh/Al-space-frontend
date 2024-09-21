@@ -1,0 +1,40 @@
+<div class="container">
+    <h1> Available Cabins</h1>
+    <div class="heading">
+
+        <h2>Cabin Name</h2>
+        <h2>Number Of Seats</h2>
+    </div>
+
+    <ng-container *ngFor="let element of data">
+
+        <div class="open">
+            <div class="inner">
+                <h3 class="btn" [routerLink]="['/form-module',element.Name_,element.No_Of_Seats,element.Id]">
+                    {{element.Name_|uppercase }}
+                </h3>
+                <h3>
+                    <span>{{element.No_Of_Seats}}</span>
+
+
+                    <mat-icon class="btn" (click)="handleClick(element.Id)">delete</mat-icon>
+
+
+                    <!-- <button class="button" >Delete</button> -->
+                    <!-- {{allocated_open_seats}}/ -->
+                </h3>
+            </div>
+            <!-- <div *ngIf="element.Name_=='Open Space'">
+                <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+            </div> -->
+        </div>
+    </ng-container>
+    <div class="dedicated">
+        <div>
+            <h3 mat-button (click)="openDialog()">
+                <!-- <button >Add Service</button> -->
+                Add Space
+            </h3>
+        </div>
+    </div>
+</div>

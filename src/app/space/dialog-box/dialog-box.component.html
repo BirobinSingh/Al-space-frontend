@@ -1,0 +1,59 @@
+<h1>ADD SERVICE</h1>
+<form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="serviceName">Service Name:</label>
+        <input id="serviceName" type="text" formControlName="serviceName">
+        <small *ngIf="serviceForm.get('serviceName')?.touched && serviceForm.get('serviceName')?.invalid" class="error">
+            Service Name is required.
+        </small>
+    </div>
+    <div>
+        <label for="serviceType">Service Type:</label>
+        <select id="serviceType" formControlName="serviceType">
+            <option value="value1">Transportation</option>
+            <option value="value2">Office Services</option>
+            <option value="value3">Refreshments</option>
+            <option value="value4">Storage</option>
+        </select>
+        <small *ngIf="serviceForm.get('serviceType')?.touched && serviceForm.get('serviceType')?.invalid" class="error">
+            Service Type is required.
+        </small>
+    </div>
+    <div>
+        <label for="desc">Description:</label>
+        <textarea id="desc" formControlName="desc"></textarea>
+        <small *ngIf="serviceForm.get('desc')?.touched && serviceForm.get('desc')?.invalid" class="error">
+            Description is required.
+        </small>
+    </div>
+    <div>
+        <label>Unit:</label>
+        <div formGroupName="unit">
+            <div class="radio" *ngFor="let unitOption of unitOptions">
+                <input class="radio-input" type="radio" [id]="unitOption" [value]="unitOption" formControlName="selectedUnit">
+                <label [for]="unitOption">{{unitOption}}</label>
+            </div>
+        </div>
+        <small *ngIf="serviceForm.get('unit.selectedUnit')?.touched && serviceForm.get('unit.selectedUnit')?.invalid" class="error">
+            Unit is required.
+        </small>
+    </div>
+
+    <div>
+        <label for="price">Price:</label>
+        <input id="price" type="number" step="0.01" formControlName="price">
+        <small *ngIf="serviceForm.get('price')?.touched && serviceForm.get('price')?.invalid" class="error">
+            Price is required and must be a positive number.
+        </small>
+    </div>
+
+    <div>
+        <label for="code">Code:</label>
+        <input id="code" type="text" formControlName="code">
+        <small *ngIf="serviceForm.get('code')?.touched && serviceForm.get('code')?.invalid" class="error">
+            Code is required.
+        </small>
+    </div>
+
+    <button type="submit" [disabled]="serviceForm.invalid">Submit</button>
+</form>
